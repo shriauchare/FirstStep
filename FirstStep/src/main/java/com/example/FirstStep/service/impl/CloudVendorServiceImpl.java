@@ -57,4 +57,12 @@ public class CloudVendorServiceImpl implements CloudVendorService {
 		return "Deleted Cloud Vendor Successfully";
 	}
 
+	@Override
+	public List<CloudVendor> findByVendorName(String vendorName) {
+		// TODO Auto-generated method stub
+		return cloudVendorRepository.findByVendorName(vendorName);
+	}
+	
+	
+
 }
