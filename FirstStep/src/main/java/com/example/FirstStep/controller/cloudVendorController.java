@@ -17,6 +17,10 @@ import com.example.FirstStep.Response.ResponseHandler;
 import com.example.FirstStep.model.CloudVendor;
 import com.example.FirstStep.service.CloudVendorService;
 
+import io.swagger.annotations.ApiOperation;
+
+//import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/cloudvendordb")
 public class cloudVendorController {
@@ -29,6 +33,7 @@ public class cloudVendorController {
 	}
 
 	 	@GetMapping("/{vendorId}")
+	 	@ApiOperation(value="Cloud Vendor Id", notes="Provide cloud vendor details",response=ResponseEntity.class)
 	    public ResponseEntity<Object> getCloudVendor(@PathVariable("vendorId") String vendorId)
 	    {
 	       return ResponseHandler.responseBuilder("Requested Vendor Details are given here",HttpStatus.OK, cloudVendorService.getCloudVendor(vendorId));
