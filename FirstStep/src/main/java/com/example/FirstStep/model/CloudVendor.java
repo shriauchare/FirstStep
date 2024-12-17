@@ -4,16 +4,16 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+//@ApiModel(description="This Table holds cloud vendor information.")
+
 
 @Entity
 @Table(name="cloud_vendor_info")
-@ApiModel(description="This Table holds cloud vendor information.")
 public class CloudVendor {
+	//@ApiModelProperty(notes="This is a Cloud Vendor Id. it shall be unique")
 
 	@Id
-	@ApiModelProperty(notes="This is a Cloud Vendor Id. it shall be unique")
 	private String vendorId;
 	private String vendorName;
 	private String vendorAddress;
